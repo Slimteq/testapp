@@ -6,7 +6,7 @@ import { Edit } from '@refinedev/mui';
 import { useForm } from '@refinedev/react-hook-form';
 import { Controller } from 'react-hook-form';
 
-export default function BlogPostEdit() {
+export default function ProjectEdit() {
     const {
         saveButtonProps,
         refineCore: { queryResult, formLoading, onFinish },

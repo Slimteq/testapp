@@ -12,7 +12,7 @@ import {
 } from '@refinedev/mui';
 import React from 'react';
 
-export default function BlogPostList() {
+export default function ProjectList() {
     const { dataGridProps } = useDataGrid({
         syncWithLocation: true,
     });

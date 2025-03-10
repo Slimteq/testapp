@@ -27,14 +27,14 @@ model User {
   /// @password
   /// @omit
   password      String
-  posts         Post[]
+  projects      Project[]
   role          String    @default("Reader")
 }
 
 /// @@allow('read', auth() != null && status == 'published')
-/// @@allow('create', auth().role == 'Writer')
+/// @@allow('create', true)
 /// @@allow('read,update,delete', author == auth())
-model Post {
+model Project {
   id        String   @id() @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()

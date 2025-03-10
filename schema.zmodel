@@ -23,7 +23,7 @@ model User {
     accounts      Account[]
     sessions      Session[]
     password      String    @password @omit
-    posts         Post[]
+    projects      Project[]
     role          String    @default('Reader')
 
     // everybody can signup
@@ -34,7 +34,7 @@ model User {
 }
 
 
-model Post {
+model Project {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
@@ -48,7 +48,7 @@ model Post {
     @@allow('read', auth() != null && status == 'published')
 
     // allow "Writer" users to create
-    @@allow('create', auth().role == 'Writer')
+    @@allow('create', true)
 
     // full access by author
     @@allow('read,update,delete', author == auth())

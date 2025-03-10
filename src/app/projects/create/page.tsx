@@ -6,7 +6,7 @@ import { Create } from '@refinedev/mui';
 import { useForm } from '@refinedev/react-hook-form';
 import { Controller } from 'react-hook-form';
 
-export default function BlogPostCreate() {
+export default function ProjectCreate() {
     const {
         saveButtonProps,
         refineCore: { formLoading, onFinish },
@@ -18,7 +18,7 @@ export default function BlogPostCreate() {
 
     return (
         <CanAccess
-            resource="post"
+            resource="project"
             action="create"
             fallback={<div>Not Allowed</div>}
         >

@@ -9,7 +9,7 @@ import {
     TextFieldComponent as TextField,
 } from '@refinedev/mui';
 
-export default function BlogPostShow() {
+export default function ProjectShow() {
     const { queryResult } = useShow({});
 
     const { data, isLoading } = queryResult;
